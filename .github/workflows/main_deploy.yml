@@ -6,36 +6,26 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Use the LTS version or the version compatible with your project
+          node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Yarn
+        run: npm install -g yarn
 
-      - name: Build Nuxt.js app
-        run: npm run build
+      - name: Install Dependencies
+        run: yarn install
 
-      - name: Deploy to cPanel
-        uses: brunocroci/cpanel-git-deploy@v2
-        with:
-          host: ${{ secrets.CPANEL_HOST }}
-          username: ${{ secrets.CPANEL_USERNAME }}
-          password: ${{ secrets.CPANEL_PASSWORD }}
-          repository: ${{ secrets.GITHUB_REPOSITORY }}
-          branch: ${{ github.ref }}
-          deploy_path: /public_html # Adjust this path according to your cPanel setup
+      - name: Build and Test
+        run: yarn build
 
-      - name: Install PM2
-        run: npm install pm2 -g
-
-      - name: Start Nuxt.js app with PM2
+      - name: Start Application
         run: yarn pm2

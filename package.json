@@ -8,6 +8,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "pm2": "pm2 start ecosystem.config.cjs",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
