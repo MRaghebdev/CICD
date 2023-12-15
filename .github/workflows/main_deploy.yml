@@ -25,7 +25,7 @@ jobs:
           run: npm run build
 
         - name: Deploy to cPanel
-          uses: brunocroci/cpanel-git-deploy@v2
+          uses: MRaghebdev/CICD
           with:
             host: ${{ secrets.CPANEL_HOST }}
             username: ${{ secrets.CPANEL_USERNAME }}
