@@ -30,8 +30,8 @@ jobs:
             host: ${{ secrets.CPANEL_HOST }}
             username: ${{ secrets.CPANEL_USERNAME }}
             password: ${{ secrets.CPANEL_PASSWORD }}
-            repository: ${{ secrets.GITHUB_REPOSITORY }}
-            branch: ${{ github.ref }}
+#            repository: ${{ secrets.GITHUB_REPOSITORY }}
+#            branch: ${{ github.ref }}
             deploy_path: /public_html # Adjust this path according to your cPanel setup
 
         - name: Install PM2
