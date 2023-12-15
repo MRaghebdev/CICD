@@ -19,10 +19,10 @@ jobs:
             node-version: v18.18.2
 
         - name: Install dependencies
-          run: npm install
+          run: yarn
 
         - name: Build Nuxt.js app
-          run: npm run build
+          run: yarn build
 
         - name: Deploy to cPanel
           uses: MRaghebdev/CICD@1.0
