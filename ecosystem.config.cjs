@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'aljoodmed-w',
+      name: 'aljoodmed-t',
       exec_mode: 'fork',
       instances: 1,
       script: './.output/server/index.mjs',
