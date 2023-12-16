@@ -43,9 +43,9 @@ runs:
       run: |
         # Replace the following command with the actual deployment logic
         echo "Deploying to cPanel..."
-        echo "Host: ${{ inputs.host }}"
-        echo "Username: ${{ inputs.username }}"
-        echo "Password: ${{ inputs.password }}"
+        echo "Host: ${{ inputs.CPANEL_HOST }}"
+        echo "Username: ${{ inputs.CPANEL_USERNAME }}"
+        echo "Password: ${{ inputs.CPANEL_PASSWORD}}"
         echo "Repository: ${{ inputs.repository }}"
         echo "Branch: ${{ inputs.branch }}"
         echo "Deploy Path: ${{ inputs.deploy_path }}"
@@ -57,4 +57,4 @@ runs:
     - name: Start Nuxt.js app with PM2
       shell: bash
       run: pm2 start npm --name "your-app-name" -- start
-  
+
