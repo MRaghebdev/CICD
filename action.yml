@@ -21,7 +21,7 @@ inputs:
     required: true
 
 runs:
-  using: 'composite'
+  using: 'node16'
   steps:
     - name: Checkout code
       uses: actions/checkout@v2
