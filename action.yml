@@ -43,12 +43,12 @@ runs:
       run: |
         # Replace the following command with the actual deployment logic
         echo "Deploying to cPanel..."
-        echo "Host: ${{ inputs.CPANEL_HOST }}"
-        echo "Username: ${{ inputs.CPANEL_USERNAME }}"
-        echo "Password: ${{ inputs.CPANEL_PASSWORD}}"
-        echo "Repository: ${{ inputs.repository }}"
-        echo "Branch: ${{ inputs.branch }}"
-        echo "Deploy Path: ${{ inputs.deploy_path }}"
+        echo "Host: ${{ secrets.CPANEL_HOST }}"
+        echo "Username: ${{ secrets.CPANEL_USERNAME }}"
+        echo "Password: ${{ secrets.CPANEL_PASSWORD}}"
+        echo "Repository: ${{ secrets.repository }}"
+        echo "Branch: ${{ secrets.branch }}"
+        echo "Deploy Path: ${{ secrets.deploy_path }}"
 
     - name: Install PM2
       shell: bash
