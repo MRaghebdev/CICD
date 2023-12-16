@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'aljoodmed-t',
-      exec_mode: 'fork',
-      instances: 1,
+      exec_mode: 'cluster',
+      instances: "max",
       script: './.output/server/index.mjs',
       args: 'start',
       env: {
