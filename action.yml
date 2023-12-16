@@ -56,5 +56,5 @@ runs:
 
     - name: Start Nuxt.js app with PM2
       shell: bash
-      run: pm2 start npm --name "your-app-name" -- start
+      run: pm2 start ecosystem.config.cjs
 
