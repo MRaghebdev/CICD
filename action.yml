@@ -29,13 +29,10 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-
     - name: Install dependencies
       run: yarn
-
     - name: Build Nuxt.js app
       run: yarn build
-
     - name: Deploy to cPanel
       run: |
         # Replace the following command with the actual deployment logic
@@ -49,6 +46,5 @@ runs:
 
     - name: Install PM2
       run: npm install pm2 -g
-
     - name: Start Nuxt.js app with PM2
       run: pm2 start npm --name "your-app-name" -- start
