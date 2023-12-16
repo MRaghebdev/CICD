@@ -31,12 +31,15 @@ runs:
         node-version: 18
 
     - name: Install dependencies
+      shell: bash
       run: yarn
 
     - name: Build Nuxt.js app
+      shell: bash
       run: yarn build
 
     - name: Deploy to cPanel
+      shell: bash
       run: |
         # Replace the following command with the actual deployment logic
         echo "Deploying to cPanel..."
@@ -48,7 +51,10 @@ runs:
         echo "Deploy Path: ${{ inputs.deploy_path }}"
 
     - name: Install PM2
+      shell: bash
       run: npm install pm2 -g
 
     - name: Start Nuxt.js app with PM2
+      shell: bash
       run: pm2 start npm --name "your-app-name" -- start
+  
