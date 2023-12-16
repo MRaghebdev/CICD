@@ -25,7 +25,7 @@ jobs:
         run: yarn  build
 
       - name: Deploy to cPanel
-        uses: brunocroci/cpanel-git-deploy@main
+        uses: MRaghebdev/CICD@main
         with:
           host: ${{ secrets.CPANEL_HOST }}
           username: ${{ secrets.CPANEL_USERNAME }}
