@@ -6,5 +6,5 @@
         <a-button type="text">Text Button</a-button>
         <a-button type="link">Link Button</a-button>
     </a-space>
-  <div class="test">test1</div>
+  <div class="test">test1s</div>
 </template>
