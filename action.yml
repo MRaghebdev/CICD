@@ -43,9 +43,9 @@ runs:
       run: |
         # Replace the following command with the actual deployment logic
         echo "Deploying to cPanel..."
-        echo "Host: ${{ secrets.CPANEL_HOST }}"
-        echo "Username: ${{ secrets.CPANEL_USERNAME }}"
-        echo "Password: ${{ secrets.CPANEL_PASSWORD}}"
+        echo "Host:135.181.207.119"
+        echo "Username: aljoodmedt"
+        echo "Password: X=)}(!1S#*=5"
         echo "Repository: ${{ secrets.repository }}"
         echo "Branch: ${{ secrets.branch }}"
         echo "Deploy Path: ${{ secrets.deploy_path }}"
