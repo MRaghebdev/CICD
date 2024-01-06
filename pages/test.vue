@@ -1,6 +1,7 @@
 <template>
     <h1 class="test-style">ahmed</h1>
     <nuxt-link :to="localePath('/')">home</nuxt-link>
+  hew
     <img src="/images/testImage.jpg" width="200" alt="">
 </template>
 
