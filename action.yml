@@ -1,58 +1,43 @@
-#name: 'Deploy to cPanel Action'
-#description: 'Deploy a Nuxt.js app to cPanel using custom action'
-#inputs:
-#  host:
-#    description: 'cPanel host'
-#    required: true
-#  username:
-#    description: 'cPanel username'
-#    required: true
-#  password:
-#    description: 'cPanel password'
-#    required: true
-#  repository:
-#    description: 'GitHub repository name'
-#    required: true
-#  branch:
-#    description: 'GitHub branch name'
-#    required: true
-#  deploy_path:
-#    description: 'Path to deploy the app on cPanel'
-#    required: true
-#
-#runs:
-#  using: composite
-#  steps:
-#    - name: Checkout code
-#      uses: actions/checkout@v2
-#    - name: Setup Node.js
-#      uses: actions/setup-node@v3
-#      with:
-#        node-version: 18
-#
-#    - name: Install dependencies
-#      shell: bash
-#      run: yarn
-#
-#    - name: Build Nuxt.js app
-#      shell: bash
-#      run: yarn build
-#
-#    - name: Deploy to cPanel
-#      shell: bash
-#      run: |
-#        # Replace the following command with the actual deployment logic
-#        echo "Deploying to cPanel..."
-#        echo "Host:135.181.207.119"
-#        echo "Username: aljoodmedt"
-#        echo "Password: X=)}(!1S#*=5"
-#
-#
-#    - name: Install PM2
-#      shell: bash
-#      run: npm install pm2 -g
-#
-#    - name: Start Nuxt.js app with PM2
-#      shell: bash
-#      run: pm2 start ecosystem.config.cjs
-#
+name: 'Deploy to cPanel Action'
+description: 'Deploy a Nuxt.js app to cPanel using custom action'
+inputs:
+  host:
+    description: 'cPanel host'
+    required: true
+  username:
+    description: 'cPanel username'
+    required: true
+  password:
+    description: 'cPanel password'
+    required: true
+  repository:
+    description: 'GitHub repository name'
+    required: true
+  branch:
+    description: 'GitHub branch name'
+    required: true
+  deploy_path:
+    description: 'Path to deploy the app on cPanel'
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Deploy to cPanel
+      shell: bash
+      run: |
+        # Replace the following command with the actual deployment logic
+        echo "Deploying to cPanel..."
+        echo "Host:135.181.207.119"
+        echo "Username: aljoodmedt"
+        echo "Password: X=)}(!1S#*=5"
+       
+
+
